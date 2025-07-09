@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Komunikacijska putovnica</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/hr.js"></script>
+
+</head>
+<body>
+  <header class="print-header">
+    <div class="header-bar">
+      <img src="assets/unicef-logo.png" alt="UNICEF Logo" class="header-logo">
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="naslov">Komunikacijska putovnica</h1>
+    <h2 class="podnaslov">u slučaju hitnih situacija</h2>
+
+    <section class="intro-section">
+      <div class="intro-flex">
+        <div class="intro-left">
+          <img id="preview" class="photo-preview hidden" alt="Prikaz slike" />
+          <label for="upload" class="upload-btn no-print">📁 Učitaj vlastitu fotografiju</label>
+          <input type="file" id="upload" accept="image/*" hidden>
+          <select id="piktogram-select" class="piktogram-dropdown no-print">
+            <option value="">-- Odaberi piktogram --</option>
+            <option value="boy1.jpg">👦 Dječak</option>
+            <option value="girl1.jpg">👧 Djevojčica</option>
+          </select>
+          <button id="remove-photo" class="hidden no-print">❌ Ukloni fotografiju</button>
+          <div class="field-labels">
+		  <label>Ime:</strong> <input type="text" name="ime_uvod" /></label>
+		  </div>
+        </div>
+        <div class="intro-right">
+          <p>Ova komunikacijska putovnica sadrži osnovne informacije o osobi kako bi se osiguralo bolje razumijevanje i podrška.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="overview-section">
+	 <div class="overview-row pink-outline">
+    <img src="assets/important.png" alt="Važno o meni" class="section-icon" />
+    <span class="section-title">📌 VAŽNO O MENI</span>
+  </div>
+   <div class="overview-row green-outline">
+    <img src="assets/values.png" alt="Stvari koje su mi važne" class="section-icon" />
+    <span class="section-title">🌿 STVARI KOJE SU MI VAŽNE</span>
+  </div>
+  <div class="overview-row blue-outline">
+    <img src="assets/likes.png" alt="Volim / Ne volim" class="section-icon" />
+    <span class="section-title">💙 VOLIM / NE VOLIM</span>
+  </div>
+      
+    </section>
+
+    <div class="page-break"></div>
+
+    <section class="form-section pink">
+      <div class="section-header">📌 VAŽNO O MENI</div>
+	  
+	  
+      <div class="field-group">
+        <!-- PIKTOGRAM: ovdje umetni sliku -->
+        <img src="assets/piktogram-ime.png" class="field-icon" alt="Ime">
+		
+        <div class="field-labels">
+         <div class="form-row">
+    <div class="form-label">Ime i prezime:</div>
+    <div class="form-input"><input type="text" /></div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-label">Kako me zovu moje bliske osobe (nadimak):</div>
+    <div class="form-input"><input type="text" /></div>
+  </div>
+		 
+		 </div>
+      </div>
+      <div class="field-group">
+        <img src="assets/datum.png" class="field-icon" alt="Datum">
+        <div class="field-labels">
+          <label>Datum rođenja: <input type="text" id="datum" name="datum" class="datum-polje" placeholder="Odaberite datum" />
+</label>
+          <label>Spol:
+            <select>
+              <option>Muško</option>
+              <option>Žensko</option>
+            </select>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <button onclick="window.print()" class="no-print pdf-btn">📄 Spremi kao PDF</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

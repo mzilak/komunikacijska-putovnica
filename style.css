@@ -1,0 +1,202 @@
+:root {
+  --roza-tamna: #facccc;   /* zaglavlje sekcije */
+  --roza-svijetla: #fde8e8; /* pozadina tijela sekcije */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  background: #f0fcff;
+  color: #333;
+}
+.container {
+  max-width: 960px;
+  margin: auto;
+  background: #f0fcff;   /* UNICEF svijetloplava */
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+.naslov { text-align: center; color: #0077b6; font-size: 28px;
+  font-weight: bold; margin-bottom: 0;}
+
+.podnaslov { text-align: center; font-size: 18px; color: #555; margin-top: 4px; }
+.header-bar { background: #0077b6; padding: 10px; text-align: center; }
+.header-logo { height: 40px; }
+.intro-section { background: #f0f0f0; padding: 20px; border-radius: 10px; margin: 30px 0; }
+.intro-flex {
+  display: flex;
+  gap: 40px; /* povećaj s 30px na 40px ili više */
+  align-items: flex-start;
+}
+
+.photo-preview { width: 150px; height: 150px; border: 2px dashed #aaa; border-radius: 8px; object-fit: contain; }
+.upload-btn { background: #0077b6; color: white; padding: 8px 16px; border-radius: 6px; display: inline-block; margin-top: 10px; }
+.piktogram-dropdown { margin-top: 10px; width: 100%; padding: 6px; border-radius: 4px; }
+.overview-section { margin-bottom: 20px; }
+.overview-row { padding: 12px; border-radius: 8px; margin-bottom: 10px; font-weight: bold; }
+.pink-outline { background: #facccc; }
+.green-outline { background: #d9f8d9; }
+.blue-outline { background: #d6f0ff; }
+.page-break { page-break-after: always; }
+
+
+
+.section-header {
+  background: var(--roza-tamna);  /* ili konkretno #f28b82 */
+  color: black;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 8px 8px 0 0;
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.form-section.pink {
+  background: var(--roza-svijetla);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.form-section { background: #fde2e2; padding: 20px; border-radius: 10px; }
+.field-group {
+  display: flex;
+  gap: 20px; /* razmak između lijevog i desnog stupca */
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+.field-icon {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.overview-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.section-icon {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.section-title {
+  flex: 1;
+  text-align: center;
+}
+
+.field-labels {
+  flex: 1;
+}
+
+.field-labels label {
+  font-family: 'Roboto', sans-serif; /* isti font kao ostatak */
+  display: block;
+  margin-bottom: 8px;
+  font-size: 20px;                   /* ili npr. 15px, 17px – po želji */
+  font-weight: 500;                  /* ili bold ako želiš istaknuti pitanje */
+  color: #222;
+}
+
+input {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  color: #333;
+}
+
+.field-labels .form-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.form-label {
+  min-width: 220px;  /* širina stupca za pitanja */
+  font-weight: 500;
+  font-size: 20px;
+  margin-right: 10px;
+  color: #333;
+}
+
+.form-input input {
+  width: 100%;
+  font-size: 20px;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-label {
+  width: 260px; /* Fiksna širina za sve */
+  font-weight: 500;
+  font-size: 20px;
+}
+
+select {
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.pdf-btn { margin-top: 30px; background: #0077b6; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; }
+
+
+@media print {
+  .no-print {
+    display: none;
+  }
+
+  /* Dodaj razmak od vrha na drugoj stranici */
+  .form-section {
+    margin-top: 50px;     /* ⬅️ pomiče cijelu sekciju */
+    page-break-before: auto;
+    background: #fde2e2;  /* ako želiš da boja ostane */
+  }
+  
+  input,
+  select,
+  textarea {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: black !important;
+    font-weight: normal;
+    font-size: 16pt;
+    padding: 0;
+	width: 300px !important;  /* ili 100% ako želiš širinu kolone */
+  }
+  
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent !important;
+    border: none !important;
+    color: black !important;
+    font-size: 12pt;
+  }
+
+  select::-ms-expand {
+    display: none; /* Za Internet Explorer (ako se koristi) */
+  }
+}

@@ -16,10 +16,9 @@ body {
   padding: 20px 40px;
   border-radius: 10px;
 }
-.naslov { text-align: center; color: #0077b6; font-size: 28px;
+.naslov { text-align: center; color: #0077b6; font-size: 38px;
   font-weight: bold; margin-bottom: 0;}
-
-.podnaslov { text-align: center; font-size: 18px; color: #555; margin-top: 4px; }
+.podnaslov { text-align: center; font-size: 28px; color: #555; margin-top: 4px; }
 .header-bar { background: #0077b6; padding: 10px; text-align: center; }
 .header-logo { height: 40px; }
 .intro-section { background: #f0f0f0; padding: 20px; border-radius: 10px; margin: 30px 0; }
@@ -28,18 +27,40 @@ body {
   gap: 40px; /* povećaj s 30px na 40px ili više */
   align-items: flex-start;
 }
+.intro-left {
+  flex: 1;
+  min-width: 300px;
+}
 
-.photo-preview { width: 150px; height: 150px; border: 2px dashed #aaa; border-radius: 8px; object-fit: contain; }
+.photo-preview { width: 200px; height: 200px; border: 1px dashed #aaa; border-radius: 8px; object-fit: contain; }
 .upload-btn { background: #0077b6; color: white; padding: 8px 16px; border-radius: 6px; display: inline-block; margin-top: 10px; }
+.remove-pic { font-size: 15px; padding: 8px 16px; border-radius: 6px; display: inline-block; margin-top: 10px; }
+.intro-ime { font-weight: bold; font-size: 18px; padding: 8px 16px; display: inline-block; margin-top: 10px; }
+.intro-right { flex: 2; background: #0077b6; color: white; font-size: 18px; padding: 8px 16px; border-radius: 6px; display: inline-block; margin-top: 10px; }
 .piktogram-dropdown { margin-top: 10px; width: 100%; padding: 6px; border-radius: 4px; }
+.intro-textarea { color: white; font-size: 18px; }
+
+.namjena-textarea {
+  width: 100%;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: none;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: white;
+  line-height: 1.5;
+}
+
 .overview-section { margin-bottom: 20px; }
 .overview-row { padding: 12px; border-radius: 8px; margin-bottom: 10px; font-weight: bold; }
 .pink-outline { background: #facccc; }
 .green-outline { background: #d9f8d9; }
 .blue-outline { background: #d6f0ff; }
 .page-break { page-break-after: always; }
-
-
 
 .section-header {
   background: var(--roza-tamna);  /* ili konkretno #f28b82 */
@@ -59,11 +80,17 @@ body {
 
 .form-section { background: #fde2e2; padding: 20px; border-radius: 10px; }
 .field-group {
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	padding: 16px;
   display: flex;
   gap: 20px; /* razmak između lijevog i desnog stupca */
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 24px;
+  background-color: #fff8f8;
 }
+
+
 .field-icon {
   width: 100px;
   height: auto;
@@ -158,6 +185,25 @@ select {
   border-radius: 4px;
 }
 
+/* Omogućuje dva stupca unutar istog reda */
+.form-row.two-cols {
+  display: flex;
+  gap: 30px;
+}
+
+/* Svaki “mini” stupac (pitanje + odgovor) */
+.form-subcol {
+  flex: 1;
+}
+
+.row-subtitle {
+  text-align: center;
+  font-weight: bold;
+  font-size: 21px;
+  margin-bottom: 12px;
+  color: #444;
+}
+
 .pdf-btn { margin-top: 30px; background: #0077b6; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; }
 
 
@@ -181,9 +227,19 @@ select {
     box-shadow: none !important;
     color: black !important;
     font-weight: normal;
-    font-size: 16pt;
+    font-size: 18pt;
     padding: 0;
 	width: 300px !important;  /* ili 100% ako želiš širinu kolone */
+
+  }
+  
+.namjena-textarea {
+    border: none !important;
+    background: transparent !important;
+    color: white !important;
+    font-size: 20px;
+    padding: 0;
+    box-shadow: none !important;
   }
   
   select {
@@ -199,4 +255,8 @@ select {
   select::-ms-expand {
     display: none; /* Za Internet Explorer (ako se koristi) */
   }
+  
+  /* .hide-on-print {
+    display: none !important;
+  }*/
 }

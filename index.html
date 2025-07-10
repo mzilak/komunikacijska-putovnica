@@ -26,7 +26,7 @@
     <section class="intro-section">
       <div class="intro-flex">
         <div class="intro-left">
-          <img id="preview" class="photo-preview hidden" alt="Prikaz slike" />
+          <img id="preview" class="photo-preview hidden" alt="Prikaz fotografije/piktograma" />
           <label for="upload" class="upload-btn no-print">📁 Učitaj vlastitu fotografiju</label>
           <input type="file" id="upload" accept="image/*" hidden>
           <select id="piktogram-select" class="piktogram-dropdown no-print">
@@ -34,13 +34,16 @@
             <option value="boy1.jpg">👦 Dječak</option>
             <option value="girl1.jpg">👧 Djevojčica</option>
           </select>
-          <button id="remove-photo" class="hidden no-print">❌ Ukloni fotografiju</button>
+          <button id="remove-photo" class="remove-pic hidden no-print">❌ Ukloni fotografiju</button>
           <div class="field-labels">
-		  <label>Ime:</strong> <input type="text" name="ime_uvod" /></label>
+		  <label class="intro-ime">Ime:</strong> <input type="text" name="ime_uvod" /></label>
 		  </div>
         </div>
         <div class="intro-right">
-          <p>Ova komunikacijska putovnica sadrži osnovne informacije o osobi kako bi se osiguralo bolje razumijevanje i podrška.</p>
+          <div class="form-input">
+		  <textarea class="namjena-textarea" rows="6" placeholder="Kratki unos o namjeni putovnice (maksimalno 6 redova teksta)"></textarea>
+
+		  </div>
         </div>
       </div>
     </section>
@@ -97,6 +100,69 @@
           </label>
         </div>
       </div>
+	  
+	  <div class="field-group">
+        <!-- ADRESA -->
+        <img src="assets/adresa.png" class="field-icon" alt="Ime">
+		
+        <div class="field-labels">
+		<!-- PODNASLOV -->
+		<div class="row-subtitle">Moji kontakti</div>
+
+         <div class="form-row two-cols">
+			<!-- Lijevi stupac -->
+			<div class="form-subcol">
+				<div class="form-label">Adresa stanovanja:</div>
+				<div class="form-input"><input type="text" /></div>
+			</div>
+			
+			<div class="form-subcol">
+				<div class="form-label">Ime kontakt osobe:</div>
+				<div class="form-input"><input type="text" /></div>
+			</div>
+		</div>
+
+<div class="form-row two-cols">
+			<!-- Lijevi stupac -->
+			<div class="form-subcol">
+				<div class="form-label">Stanujem sa:</div>
+				<div class="form-input"><input type="text" /></div>
+			</div>
+			
+			<div class="form-subcol">
+				<div class="form-label">Adresa:</div>
+				<div class="form-input"><input type="text" /></div>
+			</div>
+		</div>
+		
+		
+		<div class="form-row two-cols">
+			<!-- Lijevi stupac -->
+			<div class="form-subcol">
+				<div class="form-label">Broj telefona/mobitela:</div>
+				<div class="form-input"><input type="text" /></div>
+			</div>
+			
+			<div class="form-subcol">
+				<div class="form-label">Broj telefona/mobitela:</div>
+				<div class="form-input"><input type="text" /></div>
+			</div>
+		</div>
+		
+  	<div class="form-row two-cols">
+			<!-- Lijevi stupac -->
+			<div class="form-subcol">
+				<div class="form-label">Mail:</div>
+				<div class="form-input"><input type="text" /></div>
+			</div>
+			
+			<div class="form-subcol">
+				<div class="form-label">Mail:</div>
+				<div class="form-input"><input type="text" /></div>
+			</div>
+		</div>
+		 
+		
     </section>
 
     <button onclick="window.print()" class="no-print pdf-btn">📄 Spremi kao PDF</button>

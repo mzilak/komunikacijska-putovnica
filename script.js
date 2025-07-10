@@ -2,6 +2,7 @@
 const previewImg = document.getElementById('preview');
 const removeBtn = document.getElementById('remove-photo');
 const pictogramSelect = document.getElementById('piktogram-select');
+
 document.getElementById('upload').addEventListener('change', function(e) {
   const file = e.target.files[0];
   if (!file) return;
@@ -40,3 +41,19 @@ flatpickr("#datum", {
   dateFormat: "d.m.Y.",  // DD.MM.GGGG
   allowInput: true
 });
+
+
+function sakrijPraznaPolja() {
+  const rows = document.querySelectorAll('.form-row');
+  rows.forEach(row => {
+    const input = row.querySelector('input, select, textarea');
+    if (input && !input.value.trim()) {
+      row.classList.add('hide-on-print');
+    } else {
+      row.classList.remove('hide-on-print');
+    }
+  });
+}
+
+
+window.addEventListener('beforeprint', sakrijPraznaPolja);

@@ -103,7 +103,7 @@
 	  
 	  <div class="field-group">
         <!-- ADRESA -->
-        <img src="assets/adresa.png" class="field-icon" alt="Ime">
+        <img src="assets/adresa.png" class="field-icon" alt="Adresa">
 		
         <div class="field-labels">
 		<!-- PODNASLOV -->
@@ -140,12 +140,12 @@
 			<!-- Lijevi stupac -->
 			<div class="form-subcol">
 				<div class="form-label">Broj telefona/mobitela:</div>
-				<div class="form-input"><input type="text" /></div>
+				<div class="form-input"><input type="tel" maxlength="14" pattern="[0-9]*" placeholder="npr. 0911234567"/></div>
 			</div>
 			
 			<div class="form-subcol">
 				<div class="form-label">Broj telefona/mobitela:</div>
-				<div class="form-input"><input type="text" /></div>
+				<div class="form-input"><input type="tel" maxlength="14" pattern="[0-9]*" placeholder="npr. 0911234567"/></div>
 			</div>
 		</div>
 		
@@ -153,17 +153,249 @@
 			<!-- Lijevi stupac -->
 			<div class="form-subcol">
 				<div class="form-label">Mail:</div>
-				<div class="form-input"><input type="text" /></div>
+				<div class="form-input"><input type="email" name="email" required placeholder="npr. ime@domena.com" /></div>
 			</div>
 			
 			<div class="form-subcol">
 				<div class="form-label">Mail:</div>
-				<div class="form-input"><input type="text" /></div>
+				<div class="form-input"><input type="email" name="email" required placeholder="npr. ime@domena.com" /></div>
 			</div>
 		</div>
 		 
+	</div>
+	</div>
 		
+		<!--  <div class="section-header"></div>  RAZMAK -->
+		
+		<div class="field-group">
+        <!-- PIKTOGRAM -->
+        <img src="assets/komunikacija.png" class="field-icon" alt="Kako komuniciram">
+		
+        <div class="field-labels">
+         <div class="form-row two-cols">
+		 <div class="form-subcol left">
+			<div class="form-label">Kako komuniciram/koji jezik govorim:</div>
+		</div>
+		<div class="form-subcol right">
+		 <div class="form-input ">
+				<textarea class="free-textarea" rows="4" placeholder="(primjerice koristim komunikacijsku knjigu, hrvatski jezik) (maksimalno 4 reda teksta)"></textarea>
+			</div>
+		</div>
+		
+	 
+		 </div>
+      </div>
+		</div>
     </section>
+	
+
+	<div class="page-break"></div>
+	
+	<section class="form-section pink">
+    
+	<div class="field-group">
+        <!-- PIKTOGRAM -->
+        <img src="assets/podrska.png" class="field-icon" alt="Koji oblici podrške su mi potrebni i tko mi ih pruža">
+		
+        <div class="field-labels">
+         <div class="form-row two-cols">
+		 <div class="form-subcol left">
+			<div class="form-label">Koji oblici podrške su mi potrebni i tko mi ih pruža:</div>
+		</div>
+		<div class="form-subcol right">
+		 <div class="form-input ">
+				<textarea class="free-textarea" rows="5" placeholder="Slobodan unos, nije obavezno (maksimalno 5 redova teksta)"></textarea>
+			</div>
+		</div>
+		
+	 
+		 </div>
+      </div>
+		</div>
+		
+		<div class="field-group">
+        <!-- PIKTOGRAM -->
+        <img src="assets/religija.png" class="field-icon" alt="religija">
+		
+        <div class="field-labels">
+         <div class="form-row two-cols">
+		 <div class="form-subcol left">
+			<div class="form-label">Moja religijska opredjeljenost:</div>
+		</div>
+		<div class="form-subcol right">
+		 <div class="form-input ">
+				<textarea class="free-textarea" rows="4" placeholder="Slobodan unos, nije obavezno (maksimalno 4 reda teksta)"></textarea>
+			</div>
+		</div>
+		
+	 
+		 </div>
+      </div>
+		</div>
+		
+		      <div class="field-group">
+        <!-- PIKTOGRAM: ovdje umetni sliku -->
+        <img src="assets/lijecnik.png" class="field-icon" alt="Lijecnik">
+		
+        <div class="field-labels">
+		
+		<div class="form-row">
+			<div class="form-label">Moj liječnik obiteljske medicine:</div>
+			<div class="form-input"><input type="text" /></div>
+		</div>
+
+		<div class="form-row">
+			<div class="form-label">Adresa liječnika:</div>
+			<div class="form-input"><input type="text" /></div>
+		</div>
+		
+		 <div class="form-row">
+			<div class="form-label">Kontakt liječnika:</div>
+			<div class="form-input"><input type="tel" maxlength="14" pattern="[0-9]*" placeholder="npr. 0911234567"/></div>
+		</div>
+		</div>
+		 </div>
+       
+		<div class="field-group">
+        <!-- PIKTOGRAM -->
+        <img src="assets/alergije.png" class="field-icon" alt="alergije i intolerancije">
+		
+        <div class="field-labels">
+         <div class="form-row two-cols">
+		 <div class="form-subcol left">
+			<div class="form-label">Alergije i intolerancije:</div>
+		</div>
+		<div class="form-subcol right">
+		 <div class="form-input ">
+				<textarea class="free-textarea" rows="4" placeholder="Slobodan unos, nije obavezno (maksimalno 4 reda teksta)"></textarea>
+			</div>
+		</div>
+		 </div>
+      </div>
+		</div>
+		
+		<div class="field-group">
+        <!-- PIKTOGRAM: ovdje umetni sliku -->
+        <img src="assets/disanje.png" class="field-icon" alt="Teškoće s disanjem">
+		
+        <div class="field-labels">
+		
+		<div class="form-row">
+			<div class="form-label">Teškoće sa srcem ili disanjem:</div>
+			<div class="form-input"><input type="text" /></div>
+		</div>
+
+		<div class="form-row">
+			<div class="form-label">Postoji li rizik od gušenja (teškoće sa gutanjem, hranjenjem):</div>
+			<div class="form-input"><input type="text" /></div>
+		</div>
+		</div>
+		 </div>
+		
+	</section>
+	
+	
+	
+	<div class="page-break"></div>
+	
+	<section class="form-section pink">
+    
+       
+		<div class="field-group">
+        <!-- PIKTOGRAM -->
+        <img src="assets/strucnjaci.png" class="field-icon" alt="Stručnjaci">
+		
+        <div class="field-labels">
+         <div class="form-row two-cols">
+		 <div class="form-subcol left">
+			<div class="form-label">Koristim usluge drugih medicinskih i rehabilitacijskih stručnjaka:</div>
+
+		</div>
+		<div class="form-subcol right">
+		 <div class="form-input ">
+				<textarea class="free-textarea" rows="4" placeholder="Slobodan unos, nije obavezno (maksimalno 4 reda teksta)"></textarea>
+			</div>
+		</div>
+		 </div>
+      </div>
+		</div>
+		
+		<div class="field-group">
+        <!-- PIKTOGRAM -->
+        <img src="assets/intervencije.png" class="field-icon" alt="intervencije">
+		
+        <div class="field-labels">
+         <div class="form-row two-cols">
+		 <div class="form-subcol left">
+			<div class="form-label">Medicinske intervencije (na koji način mi treba izvaditi krv, dati injekciju, izmjeriti tlak…):</div> 
+
+		</div>
+		<div class="form-subcol right">
+		 <div class="form-input ">
+				<textarea class="free-textarea" rows="4" placeholder="Slobodan unos, nije obavezno (maksimalno 4 reda teksta)"></textarea>
+			</div>
+		</div>
+		 </div>
+      </div>
+		</div>
+		
+		<div class="field-group">
+        <!-- PIKTOGRAM: ovdje umetni sliku -->
+        <img src="assets/lijekovi.png" class="field-icon" alt="Lijekovi">
+		
+        <div class="field-labels">
+		
+		<div class="form-row">
+			<div class="form-label">Trenutno koristim lijekove:</div>
+			<div class="form-input"><input type="text" /></div>
+		</div>
+
+		<div class="form-row">
+			<div class="form-label">Lijekove uzimam u obliku (injekcija, sirup, smrvljene..):</div>
+			<div class="form-input"><input type="text" /></div>
+		</div>
+		</div>
+		 </div>
+		 
+		 <div class="field-group">
+        <!-- PIKTOGRAM -->
+        <img src="assets/povijest.png" class="field-icon" alt="Medicinska povijest">
+		
+        <div class="field-labels">
+         <div class="form-row two-cols">
+		 <div class="form-subcol left">
+			<div class="form-label">Moja medicinska povijest i plan liječenja:</div>
+
+		</div>
+		<div class="form-subcol right">
+		 <div class="form-input ">
+				<textarea class="free-textarea" rows="6" placeholder="Slobodan unos, nije obavezno (maksimalno 6 redova teksta)"></textarea>
+			</div>
+		</div>
+		 </div>
+      </div>
+		</div>
+		
+		<div class="field-group">
+        <!-- PIKTOGRAM -->
+        <img src="assets/strah.png" class="field-icon" alt="strah">
+		
+        <div class="field-labels">
+         <div class="form-row two-cols">
+		 <div class="form-subcol left">
+			<div class="form-label">Što činim ako me strah i kako mi možeš pomoći:</div> 
+
+		</div>
+		<div class="form-subcol right">
+		 <div class="form-input ">
+				<textarea class="free-textarea" rows="6" placeholder="Slobodan unos, nije obavezno (maksimalno 6 redova teksta)"></textarea>
+			</div>
+		</div>
+		 </div>
+      </div>
+		</div>
+		
+	</section>
 
     <button onclick="window.print()" class="no-print pdf-btn">📄 Spremi kao PDF</button>
   </main>

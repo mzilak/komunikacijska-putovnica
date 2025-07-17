@@ -1,361 +1,115 @@
-:root {
-  --roza-tamna: #facccc;   /* zaglavlje sekcije */
-  --roza-svijetla: #fde8e8; /* pozadina tijela sekcije */
-}
 
 body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  background: #f0fcff;
+  font-family: Arial, sans-serif;
+  background: #f5faff;
   color: #333;
+  margin: 0;
 }
 .container {
-  max-width: 960px;
+  max-width: 1000px;
   margin: auto;
-  background: #f0fcff;   /* UNICEF svijetloplava */
-  padding: 20px 40px;
-  border-radius: 10px;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 12px;
 }
-.naslov { text-align: center; color: #0077b6; font-size: 38px;
-  font-weight: bold; margin-bottom: 0;}
-.podnaslov { text-align: center; font-size: 28px; color: #555; margin-top: 4px; }
-.header-bar { background: #0077b6; padding: 10px; text-align: center; }
-.header-logo { height: 40px; }
-.intro-section { background: #f0f0f0; padding: 20px; border-radius: 10px; margin: 30px 0; }
+h1.naslov {
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 26px;
+  color: #0077b6;
+}
+h2.podnaslov {
+  text-align: center;
+  font-weight: normal;
+  font-size: 16px;
+  margin-top: 4px;
+  color: #555;
+}
+.print-header .header-bar {
+  background: #e0f4fb;
+  padding: 10px 0;
+  text-align: center;
+}
+.header-logo {
+  height: 40px;
+}
+
+/* Uvodna sekcija */
+.intro-section {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 30px 0;
+}
 .intro-flex {
   display: flex;
-  gap: 40px; /* povećaj s 30px na 40px ili više */
-  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 .intro-left {
   flex: 1;
-  min-width: 300px;
+  min-width: 200px;
 }
-
-.photo-preview { width: 200px; height: 200px; border: 1px dashed #aaa; border-radius: 8px; object-fit: contain; }
-.upload-btn { background: #0077b6; color: white; padding: 8px 16px; border-radius: 6px; display: inline-block; margin-top: 10px; }
-.remove-pic { font-size: 15px; padding: 8px 16px; border-radius: 6px; display: inline-block; margin-top: 10px; }
-.intro-ime { font-weight: bold; font-size: 18px; padding: 8px 16px; display: inline-block; margin-top: 10px; }
-.intro-right { flex: 0.9; background: #0077b6; color: white; font-size: 18px; padding: 8px 16px; border-radius: 6px; display: inline-block; margin-top: 10px; }
-.piktogram-dropdown { margin-top: 10px; width: 100%; padding: 6px; border-radius: 4px; }
-.intro-textarea { color: white; font-size: 18px; }
-
-.namjena-textarea {
-  width: 400px;
-  max-width: 100%;
-  font-size: 18px;
-  font-family: 'Roboto', sans-serif;
-  color: #333;
-  padding: 8px 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  resize: none;
-  overflow: hidden;
-  box-sizing: border-box;
-  background-color: white;
-  line-height: 1.5;
+.intro-right {
+  flex: 2;
 }
-
-
-.overview-section { margin-bottom: 20px; }
-.overview-row { padding: 12px; border-radius: 8px; margin-bottom: 10px; font-weight: bold; }
-.pink-outline { background: #facccc; }
-.green-outline { background: #d9f8d9; }
-.blue-outline { background: #d6f0ff; }
-.page-break { page-break-after: always; }
-
-.section-header {
-  background: var(--roza-tamna);  /* ili konkretno #f28b82 */
-  color: black;
-  font-weight: bold;
-  padding: 10px 16px;
-  border-radius: 8px 8px 0 0;
-  font-size: 26px;
-  text-align: center;
-  margin-bottom: 12px;
-}
-.form-section.pink {
-  background: var(--roza-svijetla);
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.form-section { background: #fde2e2; padding: 20px; border-radius: 10px; }
-.field-group {
-	border: 1px solid #ddd;
-	border-radius: 10px;
-	padding: 12px 12px;        /* manji padding gore/dolje */
-	display: flex;
-	gap: 12px;                 /* manji razmak lijevo/desno */
-  margin-bottom: 12px;       /* manje razmaka između grupa */
-  background-color: #fff8f8;
-
-}
-
-
-.field-icon {
-  width: 100px;
-  height: auto;
-  object-fit: contain;
-  flex-shrink: 0;
-  margin-top: 5px;
-}
-
-.overview-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px;
+.photo-preview {
+  width: 150px;
+  height: 150px;
+  border: 2px dashed #aaa;
   border-radius: 8px;
-  margin-bottom: 10px;
-  font-weight: bold;
-  font-size: 24px;
-}
-
-.section-icon {
-  width: 120px;
-  height: 120px;
   object-fit: contain;
-  flex-shrink: 0;
+  background: white;
 }
-
-.section-title {
-  flex: 1;
-  text-align: center;
+.hidden { display: none; }
+.ime-label {
+  margin-top: 10px;
 }
-
-.field-labels {
-  flex: 1;
+.upload-btn {
+  display: inline-block;
+  background: #0077b6;
+  color: white;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+  cursor: pointer;
 }
-
-.field-labels label {
-  font-family: 'Roboto', sans-serif; /* isti font kao ostatak */
+.upload-btn:hover {
+  background: #023e8a;
+}
+.piktogram-dropdown {
   display: block;
-  margin-bottom: 8px;
-  font-size: 20px;                   /* ili npr. 15px, 17px – po želji */
-  font-weight: bold;                  /* ili bold ako želiš istaknuti pitanje */
-  color: #222;
-}
-
-input {
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  font-weight: normal;
-  color: #333;
-}
-
-.field-labels .form-row {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 8px;
-  align-items: center;
-}
-
-.form-label {
-  min-width: 220px;  /* širina stupca za pitanja */
-  font-weight: 500;
-  font-size: 20px;
-  margin-right: 10px;
-  color: #333;
-}
-
-.form-input input {
+  margin-top: 10px;
+  padding: 6px;
   width: 100%;
-  font-size: 20px;
-  padding: 6px 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-family: 'Roboto', sans-serif;
-  box-sizing: border-box;
-}
-
-.form-row {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.form-label {
-  width: 260px; /* Fiksna širina za sve */
-  font-size: 20px;
-  font-weight: bold;
-  margin-right: 10px;
-  color: #333;
-  line-height: 1.4;
-}
-
-select {
-  font-size: 18px;
-  font-family: 'Roboto', sans-serif;
-  padding: 6px 10px;
-  border-radius: 4px;
-}
-
-/* Omogućuje dva stupca unutar istog reda */
-.form-row.two-cols {
-  display: flex;
-  gap: 30px;
-  box-sizing: border-box;
-  align-items: stretch;
-}
-
- .form-subcol.left{
-	 display: flex;
-	 align-items: center;
- }
- 
- 
-/* Svaki “mini” stupac (pitanje + odgovor) */
-.form-subcol {
-  flex: 1;
-}
-
-.form-subcol.left {
-	 display: flex;
-  align-items: center;
-  flex: 0 0 35%;
-  max-width: 35%;
-  box-sizing: border-box;
-}
-/* 0 0 50%;
-  max-width: 50%;*/
-.form-subcol.right {
-  flex: 1;
-  box-sizing: border-box;
-}
-
-.free-textarea {
-  width: 400px;
-  font-size: 20px;
-  font-family: 'Roboto', sans-serif;
-  color: #333;
-  padding: 8px 12px;
-  border: 1px solid #ccc;
   border-radius: 6px;
-  resize: none;
-  overflow: hidden;
-  box-sizing: border-box;
-  background-color: white;
-  line-height: 1.5;
-  height: calc(20px * 1.5 * 6); /* visina za 6 redova */
-  max-height: 100%;
+  border: 1px solid #ccc;
 }
 
-
-
-.row-subtitle {
-  text-align: center;
-  font-weight: bold;
-  font-size: 21px;
-  margin-bottom: 12px;
-  color: #444;
+/* Gumb za PDF */
+.pdf-btn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.pdf-btn:hover {
+  background: #023e8a;
 }
 
-.pdf-btn { margin-top: 30px; background: #0077b6; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; }
-
-
+/* Ispis stil */
 @media print {
   .no-print {
-    display: none;
-  }
-
-  /* Dodaj razmak od vrha na drugoj stranici */
-  .form-section {
-    margin-top: 50px;     /* ⬅️ pomiče cijelu sekciju */
-    page-break-before: auto;
-    background: #fde2e2;  /* ako želiš da boja ostane */
-  }
-  
-  input,
-  select,
-  textarea {
-    border: none !important;
-    background: transparent !important;
-    box-shadow: none !important;
-    color: black !important;
-    font-weight: normal;
-    font-size: 18pt;
-    padding: 0;
-	width: 300px !important;  /* ili 100% ako želiš širinu kolone */
-
-  }
-  
-.namjena-textarea {
-    border: none !important;
-    background: transparent !important;
-    color: white !important;
-    font-size: 20px;
-    padding: 0;
-    box-shadow: none !important;
-  }
-  
-  textarea {
-    width: 90% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    white-space: pre-wrap !important;
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
-    border: none !important;
-    background: transparent !important;
-    color: black !important;
-    font-size: 18pt;
-    padding: 0;
-    resize: none !important;
-  }
-
-  textarea::-webkit-scrollbar {
-    display: none;
-  }
-  
-  
-  select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background: transparent !important;
-    border: none !important;
-    color: black !important;
-    font-size: 12pt;
-  }
-
-  select::-ms-expand {
-    display: none; /* Za Internet Explorer (ako se koristi) */
-  }
-
-  input::placeholder {
-    color: transparent !important;
-  }
-    textarea::placeholder {
-    color: transparent !important;
-  }
-  
-   input[type="email"] {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    color: black !important;
-    font-size: 12pt;
-    width: 100% !important;
-    padding: 0 !important;
-  }
-  
-  .form-input {
-    background: transparent !important;
-    padding: 0 !important;
-  }
-  
-    input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
-  input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
-    background-color: white !important;
-    color: black !important;
-  }
-  
-  
-  /* .hide-on-print {
     display: none !important;
-  }*/
+  }
+  .print-header {
+    display: block !important;
+  }
+  .container {
+    padding-top: 100px;
+  }
 }

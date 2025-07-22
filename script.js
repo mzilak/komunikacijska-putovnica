@@ -42,6 +42,10 @@ flatpickr("#datum", {
   allowInput: true
 });
 
+flatpickr(".datum-polje", {
+  dateFormat: "d.m.Y.",
+  locale: "hr"
+});
 
 function sakrijPraznaPolja() {
   const rows = document.querySelectorAll('.form-row');
@@ -54,6 +58,5 @@ function sakrijPraznaPolja() {
     }
   });
 }
-
 
 window.addEventListener('beforeprint', sakrijPraznaPolja);

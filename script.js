@@ -29,7 +29,7 @@ if (removeBtn) {
 if (pictogramSelect) {
   pictogramSelect.addEventListener('change', function() {
     if (this.value) {
-      previewImg.src = this.value;
+      previewImg.src = 'assets/' + this.value;
       previewImg.classList.remove('hidden');
       if (removeBtn) removeBtn.classList.add('hidden');
       document.getElementById('upload').value = '';

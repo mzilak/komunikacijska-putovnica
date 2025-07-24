@@ -33,6 +33,33 @@ body {
   min-width: 300px;
 }
 
+.piktogram-galerija {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.piktogram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.piktogram-choice {
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  transition: border 0.3s ease;
+}
+
+.piktogram-choice:hover,
+.piktogram-choice.selected {
+  border: 2px solid #00aaff;
+}
+
 .photo-preview { width: 200px; height: 200px; border: 1px dashed #aaa; border-radius: 8px; object-fit: contain; }
 .upload-btn { background: #0077b6; color: white; padding: 8px 16px; border-radius: 6px; display: inline-block; margin-top: 10px; }
 .remove-pic { font-size: 15px; padding: 8px 16px; border-radius: 6px; display: inline-block; margin-top: 10px; }

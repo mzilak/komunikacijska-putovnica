@@ -2,6 +2,7 @@
 const previewImg = document.getElementById('preview');
 const removeBtn = document.getElementById('remove-photo');
 const pictogramSelect = document.getElementById('piktogram-select');
+const pictogramChoices = document.querySelectorAll('.piktogram-choice');
 
 document.getElementById('upload').addEventListener('change', function(e) {
   const file = e.target.files[0];
@@ -35,6 +36,18 @@ if (pictogramSelect) {
     }
   });
 }
+
+pictogramChoices.forEach(choice => {
+  choice.addEventListener('click', () => {
+    previewImg.src = choice.dataset.src;
+    previewImg.classList.remove('hidden');
+    if (removeBtn) removeBtn.classList.remove('hidden');
+    document.getElementById('upload').value = '';
+
+    pictogramChoices.forEach(c => c.classList.remove('selected'));
+    choice.classList.add('selected');
+  });
+});
 
 flatpickr("#datum", {
   locale: "hr",

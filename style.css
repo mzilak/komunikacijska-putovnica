@@ -674,3 +674,67 @@ select option {
     display: none !important;
   }*/
 }
+
+
+@media screen and (max-width: 768px) {
+  .intro-flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .intro-left,
+  .intro-right {
+    width: 100%;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .form-row,
+  .form-row.two-cols {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-subcol,
+  .form-subcol.left,
+  .form-subcol.right {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .form-label {
+    width: auto;
+    margin-bottom: 4px;
+  }
+
+  .form-input {
+    width: 100%;
+    text-align: left;
+  }
+
+  .wide-textarea8 {
+    width: 100%;
+  }
+
+  .field-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .field-icon {
+    width: 80px;
+  }
+
+  .section-icon {
+    width: 80px;
+    height: auto;
+  }
+
+  .overview-row {
+    font-size: 20px;
+    padding: 10px;
+  }
+}
+
